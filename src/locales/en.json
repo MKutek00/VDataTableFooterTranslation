@@ -1,0 +1,29 @@
+{
+  "title": "Intranet stand alone template",
+  "main": {
+    "language": "Language: {locale}"
+  },
+  "auth": {
+    "title": "Sing Up",
+    "login": "Login",
+    "logout": "Logout",
+    "password": "Password",
+    "singup": "Sing Up",
+    "badge": {
+      "title": "Or put the badge on the reader",
+      "invalid": "Invalid badge identifier"
+    },
+    "nfc": {
+      "notSupported": "Web NFC API not supported",
+      "on": "NFC is on"
+    },
+    "serial": {
+      "configure": "Configure badge reader",
+      "notSupported": "Web Serial API not supported",
+      "notSelected": "Not selected any port",
+      "error": {
+        "11": "The port is already open"
+      }
+    }
+  }
+}

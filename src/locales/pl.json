@@ -1,0 +1,29 @@
+{
+  "title": "Intranet stand alone template",
+  "main": {
+    "language": "Język: {locale}"
+  },
+  "auth": {
+    "title": "Logowanie",
+    "login": "Login",
+    "logout": "Wyloguj",
+    "password": "Password",
+    "singup": "Zaloguj",
+    "badge": {
+      "title": "Lub przyłóż identyfikator do czytnika",
+      "invalid": "Niepoprawny numer identyfikatora"
+    },
+    "nfc": {
+      "notSupported": "Web NFC API jest niedostępne",
+      "on": "NFC is on"
+    },
+    "serial": {
+      "configure": "Konfiguracja czytnik",
+      "notSupported": "Web Serial API jest niedostępne",
+      "notSelected": "Nie wybrano żadnego portu",
+      "error": {
+        "11": "Port jest już otwarty"
+      }
+    }
+  }
+}
