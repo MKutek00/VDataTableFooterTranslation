@@ -1,17 +1,15 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { useTheme } from 'vuetify';
-import { useUserStore } from '@/stores/UserStore';
 import { getLocale, changeLanguage } from '@/plugins/i18n';
 
 const theme = useTheme();
-const user = useUserStore();
 
 const title = ref(import.meta.env.VITE_APP_TITLE || 'Vite Vuetify Application');
 const languages = {
   en: { name: 'English (EN)', code: 'en' },
-  pl: { name: 'Polski (PL)', code: 'pl' },
-  de: { name: 'Deutsch (DE)', code: 'de' }
+  pl: { name: 'Polski (PL)', code: 'pl' }
+  // de: { name: 'Deutsch (DE)', code: 'de' }
 };
 
 function toggleTheme() {
@@ -33,13 +31,9 @@ const hostColor = computed((): string => {
   <v-app-bar app :color="hostColor">
     <v-app-bar-title>{{ title }}</v-app-bar-title>
     <v-spacer />
-    <v-btn icon href="http://intranet/">
-      <v-icon color="grey-darken-3">mdi-open-in-new</v-icon>
-    </v-btn>
     <v-btn icon @click="toggleTheme">
       <v-icon :color="isDarkTheme ? 'yellow' : 'grey-darken-3'">mdi-theme-light-dark</v-icon>
     </v-btn>
-    <v-btn class="bg-white" elevation="3" @click="user.logout" v-t="'auth.logout'"></v-btn>
     <v-menu offset-y>
       <template v-slot:activator="{ props }">
         <v-btn class="bg-warning ml-2" elevation="3" v-bind="props">

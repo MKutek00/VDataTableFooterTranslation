@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { VDataTableServer } from 'vuetify/labs/components';
+import AppBar from './components/Layout/AppBar.vue';
 
 const desserts = [
   {
@@ -148,8 +149,8 @@ const selectedRequests = ref([]);
 
 <template>
   <v-app>
+    <app-bar />
     <v-main>
-      <!-- <HelloWorld /> -->
       <v-text-field label="search" v-model="search"></v-text-field>
       <v-data-table-server
         v-model:model-value="selectedRequests"
